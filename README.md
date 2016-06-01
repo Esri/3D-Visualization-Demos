@@ -5,6 +5,7 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
 
 #Outline
 * Intro (10 min)
+      * Demo 3d app (something cool) 
       * Browser support 
       * Data  (Pro, ArcGIS Online)
         * Local vs global 
@@ -16,6 +17,9 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
  * Visualization intro
       * Symbols
       * Renderers 
+ * Web Scenes
+     * Less code (offload dev tasks)
+     * Use id in your app 
 
 
 
