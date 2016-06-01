@@ -4,16 +4,16 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
 #Topics to cover 
 
 #Outline
-*Intro (10 min)
-      *Browser support 
-      *Data  (Pro, ArcGIS Online)
+* Intro (10 min)
+      * Browser support 
+      * Data  (Pro, ArcGIS Online)
         * Local vs global 
-      *Quickly build demo app
+      * Quickly build demo app
         * Create map, view
         * Add layer to map (also maybe demo web scene)
         * Explain camera
         * Ground elevation
- *Visualization intro
+ * Visualization intro
       * Symbols
       * Renderers 
 
