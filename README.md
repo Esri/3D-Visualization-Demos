@@ -19,6 +19,6 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
 * Web Scenes  (Kelly)
      * Less code (offload dev tasks)
      * Use id in your app 
-
+     * Limitations (currently)
 
 
