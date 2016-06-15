@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>3D multivariate rendering</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.0/"></script>
+
+  <style>
+    html, body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #input{
+      color: white;
+      padding: 10px;
+      max-width: 250px;
+      background-color: #004238;
+      opacity: 0.8;
+    }
+  </style>
+
+  <script>
+    require([
+      "esri/views/SceneView",
+      "esri/Map",
+      "esri/Camera",
+      "esri/layers/FeatureLayer",
+      "esri/renderers/SimpleRenderer",
+      "esri/symbols/PolygonSymbol3D",
+      "esri/symbols/ObjectSymbol3DLayer",
+      "esri/symbols/ExtrudeSymbol3DLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+      SceneView, Map, Camera, FeatureLayer, SimpleRenderer,
+      PolygonSymbol3D, ObjectSymbol3DLayer, ExtrudeSymbol3DLayer, dom, on
+    ) {
+
+      var REYNOSA = new Camera({
+        position: {
+          x: -10979880,
+          y: 2990348,
+          z: 40850,
+          spatialReference: { wkid: 3857 }
+        },
+        heading: 69,
+        tilt: 43
+      });
+
+      var MATAMOROS = new Camera({
+        position: {
+          x: -10845396,
+          y: 2953085,
+          z: 27617,
+          spatialReference: { wkid: 3857 }
+        },
+        heading: 340,
+        tilt: 47
+      });
+
+      var LAREDO = new Camera({
+        position: {
+          x: -11050301,
+          y: 3158875,
+          z: 31630,
+          spatialReference: { wkid: 3857 }
+        },
+        heading: 304,
+        tilt: 51
+      });
+
+      var VICTORIA = new Camera({
+        position: {
+          x: -11046767,
+          y: 2693632,
+          z: 9816,
+          spatialReference: { wkid: 3857 }
+        },
+        heading: 18,
+        tilt: 74
+      });
+
+      var TAMPICO = new Camera({
+        position: {
+          x: -10911255,
+          y: 2497455,
+          z: 22644,
+          spatialReference: { wkid: 3857 }
+        },
+        heading: 18,
+        tilt: 71
+      });
+
+      var MOVED = "tamps_cpv2010_ageb_urb_migrac_8",
+        POP = "tamps_ageb_urb_POB1",
+        FOREIGN = "tamps_cpv2010_ageb_urb_migra_14",
+        MORTALITY = "tamps_cpv2010_ageb_urb_mortal_2",
+        ILLITERATE = "tamps_cpv2010_ageb_urb_carac_69";
+
+      var layer = new FeatureLayer({
+        portalItem: { // autocasts as new PortalItem()
+          id: "17fe61e6077b4ff39916f2c11546f05d"
+        },
+        outFields: [ MORTALITY, POP, FOREIGN, MOVED, ILLITERATE ],
+        definitionExpression: MOVED + ">= 0 AND " + POP + ">= 0",
+        renderer: new SimpleRenderer({
+          symbol: new PolygonSymbol3D({
+            symbolLayers: [new ExtrudeSymbol3DLayer()]
+          }),
+          label: "City",
+          visualVariables: [{
+            type: "size",
+            field: MOVED,
+            normalizationField: POP,
+            stops: [
+              { value: .15, size: 1000 },
+              { value: .50, size: 5000 }
+            ]
+          }, {
+            type: "color",
+            field: MOVED,
+            normalizationField: POP,
+            stops: [
+              { value: .15, color: "#ffffff" },
+              { value: .50, color: "#004238" }
+            ]
+          }]
+        }),
+        popupTemplate: {
+          title: "Tamaulipas Migrant Population",
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: MOVED,
+              label: "Born outside of entity",
+              visible: true,
+              format: {
+                digitSeparator: true,
+                places: 0
+              }
+            }, {
+              fieldName: FOREIGN,
+              label: "Foreign born",
+              visible: true,
+              format: {
+                digitSeparator: true,
+                places: 0
+              }
+            }, {
+              fieldName: POP,
+              label: "Total population",
+              visible: true,
+              format: {
+                digitSeparator: true,
+                places: 0
+              }
+            }]
+          }]
+        }
+      });
+
+      var map = new Map({
+        basemap: "gray",
+        layers: [ layer ]
+      });
+
+      /************************************************************
+       * Set the WebScene instance to the map property in a SceneView.
+       ************************************************************/
+      var view = new SceneView({
+        map: map,
+        container: "viewDiv",
+        camera: MATAMOROS
+      });
+
+      view.ui.add("input", "top-right");
+
+      on(dom.byId("citySelect"), "change", function(evt){
+        var city = evt.target.value;
+
+        if (city === "MATAMOROS") {
+          view.goTo(MATAMOROS);
+        }
+        if (city === "REYNOSA") {
+          view.goTo(REYNOSA);
+        }
+        if (city === "NUEVO LAREDO") {
+          view.goTo(LAREDO);
+        }
+        if (city === "VICTORIA") {
+          view.goTo(VICTORIA);
+        }
+        if (city === "TAMPICO") {
+          view.goTo(TAMPICO);
+        }
+
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <div id="input">
+    <h3>% of population born outside the given area</h3>
+    Select a city
+    <select id="citySelect">
+      <option value="MATAMOROS" selected>Matamoros</option>
+      <option value="REYNOSA">Reynosa</option>
+      <option value="NUEVO LAREDO">Nuevo Laredo</option>
+      <option value="VICTORIA">Victoria</option>
+      <option value="TAMPICO">Tampico</option>
+    </select>
+  </div>
+</body>
+
+</html>

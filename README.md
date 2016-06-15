@@ -15,17 +15,24 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
     * Ground elevation
 * Visualization intro  (Kristian)
   * 2D viz and 3D viz are similar in many respects
-  * 3D considerations
+    * Handled with the same renderers
+    * principles of color, generalization,
+  * 3D differences/considerations
     * Icon placement
       * Draped vs billboarded
+      * Quick sample showing both
     * Size can be rendered in flat (2D space) or take advantage of the z-axis as a volume/extrusion
+      * Images (from SDK)
     * Colors are shaded differently depending on
       * camera angle
       * environment settings
+      * Images (from SDK)
     * Opacity doesn't work well (yet)
       * Not able to see through transparent objects from certain angles
+      * Images (modified sample from SDK)
     * Rotation - not supported (yet)
       * Hard to determine in screen space where north is in a 3D view
+      * Image (from SDK)
   * Use cases
     * Location
       * Sample: Mt Baldy POI
@@ -64,8 +71,8 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
     * Visual variables
       * Defines color, size, and opacity values based on data
   * Symbols
-    * All symbol types are supported in 3D
-    * 2D symbols
+    * Most symbol types are supported in 3D
+    * 2D symbols (images + code)
       * Points
         * SimpleMarkerSymbol
         * PictureMarkerSymbol
@@ -73,8 +80,8 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
         * SimpleLineSymbol
       * Polygons
         * SimpleFillSymbol
-        * PictureFillSymbol
-    * 3D symbols (recommended)
+        * ~~PictureFillSymbol~~
+    * 3D symbols (recommended) (images + code)
       * flat vs. volumetric
       * 5 types
         * PointSymbol3D
