@@ -98,28 +98,37 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
     * 3D blog series
     * Other repos
 
-Resources
+## Resources
 
-Community
-ArcGIS for JavaScript API Resource Center
-ArcGIS Blog
-twitter@esri
-Issues
+* [Community](https://developers.arcgis.com/en/javascript/jshelp/community.html)
+* [ArcGIS for JavaScript API Resource Center](http://help.arcgis.com/en/webapi/javascript/arcgis/index.html)
+* [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
+* [twitter@esri](http://twitter.com/esri)
 
-Find a bug or want to request a new feature? Please let us know by submitting an issue.
+## Issues
 
-Contributing
+Find a bug or want to request a new feature?  Please let us know by submitting an issue.
 
-Esri welcomes contributions from anyone and everyone. Please see our guidelines for contributing.
+## Contributing
 
-Licensing
+Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
+## Licensing
 Copyright 2013 Esri
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
-A copy of the license is available in the repository's license.txt file.
+A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/application-boilerplate-js/master/license.txt) file.
+
+[](Esri Tags: ArcGIS ArcGIS Online Web Application boilerplate template widget dijit Esri JavaScript application)
+[](Esri Language: JavaScript)
