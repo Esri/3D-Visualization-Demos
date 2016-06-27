@@ -86,10 +86,6 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
     * This requires that you know your data
     * Future Smart Mapping support in 3D
       * Show slider sample?
-* Web Scenes  (Kelly)
-  * Less code (offload dev tasks)
-  * Use id in your app
-  * Limitations (currently)
 * Conclusion
   * Where to go for advanced WebGL cases
   * Helpful resources
