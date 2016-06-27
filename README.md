@@ -1,4 +1,4 @@
-# uc-2016-4x-3D-Visualization
+# 3D-Visualization-Demos
 
 Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In this session we’ll overview various points to consider when thinking about 3D visualization, including when it is appropriate to use 3D symbols and 2D symbols. Create single variable and multivariate visualizations in just a few lines of code. Understand the variety of visualization opportunities in 3D, while acknowledging some of the pitfalls. Become familiar with some of the up and coming features related to 3D visualization.
 
@@ -110,7 +110,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
-Copyright 2013 Esri
+Copyright 2016 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
