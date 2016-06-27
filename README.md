@@ -124,7 +124,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/application-boilerplate-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](https://github.com/ArcGIS/3D-Visualization-Demos/blob/master/license.txt) file.
 
-[](Esri Tags: ArcGIS ArcGIS Online Web Application boilerplate template widget dijit Esri JavaScript application)
+[](Esri Tags: Esri 3D Visualization Esri JavaScript 4.0)
 [](Esri Language: JavaScript)
