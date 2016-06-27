@@ -4,16 +4,7 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
 
 ## Topics to cover/Outline
 
-* Intro (10 min) (Kelly)
-  * Demo 3d app (something cool)
-  * Browser support
-  * Quickly build demo app
-    * Create map, view
-    * Add layer to map (also maybe demo web scene)
-    * Local vs global (default is global)
-    * Explain camera
-    * Ground elevation
-* Visualization intro  (Kristian)
+* Visualization intro  
   * 2D viz and 3D viz are similar in many respects
     * Handled with the same renderers
     * principles of color, generalization,
@@ -107,4 +98,28 @@ Learn how to visualize data in 3D with the ArcGIS 4.0 API for JavaScript. In thi
     * 3D blog series
     * Other repos
 
+Resources
 
+Community
+ArcGIS for JavaScript API Resource Center
+ArcGIS Blog
+twitter@esri
+Issues
+
+Find a bug or want to request a new feature? Please let us know by submitting an issue.
+
+Contributing
+
+Esri welcomes contributions from anyone and everyone. Please see our guidelines for contributing.
+
+Licensing
+
+Copyright 2013 Esri
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+A copy of the license is available in the repository's license.txt file.
